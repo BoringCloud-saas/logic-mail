@@ -16,6 +16,7 @@ export default function Page() {
     useEffect(() => {
         const fetchAuth = async () => {
             const response = await proveAuth()
+            console.log(response)
             setUsername(response)
         }
         fetchAuth()

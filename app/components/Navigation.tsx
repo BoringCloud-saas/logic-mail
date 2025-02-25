@@ -6,11 +6,11 @@ export default function Navigation() {
     const [signin, setSignIn] = useState(false);
 
     const handleRedirect = () => {
-        window.location.href = "https://27380a317f8c.ngrok.app/signin"
+        window.location.href = "https://af036d356565.ngrok.app/signin"
     }
 
     useEffect(() => {
-        if (window.location.href == "https://27380a317f8c.ngrok.app/signin") {
+        if (window.location.href == "https://af036d356565.ngrok.app/signin") {
             setSignIn(false)
         } else {
             setSignIn(true)

@@ -7,10 +7,10 @@ const useAuth = () => {
     const [status, setStatus] = useState<number | null>(null)
     const proveAuth = async () => {
         try {
-            const response = await axios.post("https://27380a317f8c.ngrok.app/google/auth")
+            const response = await axios.post("https://af036d356565.ngrok.app/google/auth")
             return response.data.message
         } catch (err) {
-            window.location.href = "https://27380a317f8c.ngrok.app/signin"
+            window.location.href = "https://af036d356565.ngrok.app/signin"
             console.error("auth hook catch err: ", err)
         }
     }

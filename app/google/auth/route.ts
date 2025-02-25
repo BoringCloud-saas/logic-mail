@@ -95,7 +95,9 @@ export async function POST(request: NextRequest) {
                             token: newAccessToken
                         }
                         const jsonwebtoken = jwt.sign(payload, SECRET, { expiresIn: "24h" })
-                        const response = NextResponse.redirect("https://27380a317f8c.ngrok.app/home")
+                        const result = await db.select().from(users).where(eq(users.access_token, newAccessToken));
+                        const name = result[0].name
+                        const response = NextResponse.json({ message: name });
                         response.cookies.set("auth_token", jsonwebtoken, {
                             httpOnly: true,
                             secure: true,
