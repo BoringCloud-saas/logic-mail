@@ -74,7 +74,7 @@ export async function GET(request: NextRequest) {
         }
         const jsonwebtoken = jwt.sign(payload, SECRET, { expiresIn: "24h" })
 
-        const response = NextResponse.redirect("https://ff354dcf4c06.ngrok.app/home")
+        const response = NextResponse.redirect("https://d2814b0e5599.ngrok.app/home")
         response.cookies.set("auth_token", jsonwebtoken, {
             httpOnly: true,
             secure: true,
