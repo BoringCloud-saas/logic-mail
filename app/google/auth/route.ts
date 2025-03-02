@@ -62,7 +62,6 @@ export async function POST(request: NextRequest) {
                 } catch (err) {
                     const result = await db.select().from(users).where(eq(users.access_token, accessToken));
                     const refreshToken = result[0].refresh_token
-
                     const tokenUrl = 'https://oauth2.googleapis.com/token';
                     const tokenResponse = await fetch(tokenUrl, {
                         method: "POST",
@@ -74,7 +73,6 @@ export async function POST(request: NextRequest) {
                             grant_type: "refresh_token",
                         }).toString(),
                     });
-
                     const data = await tokenResponse.json()
                     const newAccessToken = data.access_token
 
