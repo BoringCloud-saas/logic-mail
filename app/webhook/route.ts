@@ -10,7 +10,7 @@ export async function POST(request: NextRequest)  {
             const decoded = JSON.parse(buffer.toString());
             const historyID = decoded.historyId
 
-            const eventSourceUrl = "https://2000e77f40f3.ngrok.app/api"
+            const eventSourceUrl = `${process.env.NEXT_PUBLIC_NGROK_DOMAIN}/api`
 
             await fetch(eventSourceUrl, {
                 method: "POST",

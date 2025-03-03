@@ -5,7 +5,7 @@ import Navigation from "../components/Navigation";
 
 export default function page() {
     const handleRedirect = () => {
-        window.location.href = 'https://2000e77f40f3.ngrok.app/google'; // Weiterleitung zur externen URL
+        window.location.href = `${process.env.NEXT_PUBLIC_NGROK_DOMAIN}/google`; // Weiterleitung zur externen URL
     }
 
     return (
