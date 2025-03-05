@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
- 
+
 export default function Navigation() {
     const [signin, setSignIn] = useState(false);
 
