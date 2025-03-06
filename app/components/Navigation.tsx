@@ -16,7 +16,7 @@ export default function Navigation() {
             setSignIn(true)
         }
     }, [])
-
+    
     return (
         <div className="flex justify-between items-center rounded-md bg-[#fafafa]">
             <div className="flex items-center ml-[10%]">
